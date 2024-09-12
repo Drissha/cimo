@@ -14,8 +14,8 @@ const imageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
 
 export default function Navbar() {
   return (
-    <nav className="navbar bg-black">
-      <div className="flex items-center px-10 py-5">
+    <nav className="navbar md:relative stiky z-[99] bg-black">
+      <div className="flex items-center overflow-x-auto px-10 py-5">
         <div className="profile me-auto">
           <Image
             loader={imageLoader}
@@ -29,7 +29,7 @@ export default function Navbar() {
           <button className="relative text-black bg-[#EECE61] py-2 px-5 rounded-sm button-nav mx-5">
             Petunjuk Keuangan
           </button>
-          <button className="relative flex items-center justify-between text-black bg-[#9FB366] py-2 px-5 rounded-sm button-nav mx-5">
+          <button className="relative w-[400px] flex items-center justify-between text-black bg-[#9FB366] py-2 px-5 rounded-sm button-nav mx-5">
             <Image
               loader={imageLoader}
               src="babi.svg"
@@ -38,7 +38,7 @@ export default function Navbar() {
               height={20}
               className="mx-1"
             />
-            <span className="me-10">4 / 10</span>
+            <span className="me-auto">4 / 10</span>
             <Image
               loader={imageLoader}
               src="invest.svg"
@@ -48,7 +48,7 @@ export default function Navbar() {
               className="mx-1"
             />
             <span className="mx-2">0 / 3</span>
-            <span className="ms-10">
+            <span className="ms-auto w-[30%]">
               Your Wish
               <ProgressBar />
             </span>
