@@ -50,7 +50,7 @@ export default function Navbar() {
             <span className="mx-2">0 / 3</span>
             <span className="ms-auto w-[30%]">
               Your Wish
-              <ProgressBar />
+              <ProgressBar progress={70} color="#FFC654" size={100} />
             </span>
           </button>
           <button className="relative flex items-center justify-between text-black bg-[#44BEF0] py-2 px-5 rounded-sm button-nav mx-5">
