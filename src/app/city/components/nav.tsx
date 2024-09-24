@@ -14,7 +14,7 @@ const imageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
 
 export default function Navbar() {
   return (
-    <nav className="navbar md:relative stiky z-[99] bg-black">
+    <nav className="navbar md:relative stiky z-[99] bg-black ">
       <div className="flex items-center overflow-x-auto px-10 py-5">
         <div className="profile me-auto">
           <Image
