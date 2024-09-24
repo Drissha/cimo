@@ -114,26 +114,13 @@ export default function ModalPajak({ open, onClose }: ModalProps) {
                   Kembali
                 </button>
                 <h1 className="text-3xl">Bayar Pajak Dulu Gasieh !?</h1>
-                <p>
-                  <span className="flex items-center text-[#E65C5C] mt-3 me-10">
-                    Pajak{" "}
-                    <Image
-                      loader={imageLoader}
-                      src="pajak.png"
-                      alt="pajak"
-                      width={20}
-                      height={20}
-                      className="ms-2 w-[14px] h-[14px]"
-                    />
-                  </span>
-                </p>
                 <Image
                   loader={imageLoader}
-                  src="polisi-pajak.gif"
-                  alt="polisi"
+                  src="popup-bank.png"
+                  alt="Bank"
                   width={400}
                   height={400}
-                  className="ms-2 absolute left-[-3rem] bottom-[-7rem]"
+                  className="ms-2"
                 />
               </div>
               <div className="right rounded bg-[#272323] border border-2 border-[#000000]">

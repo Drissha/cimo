@@ -1,213 +1,249 @@
 "use client";
 import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 
-import { Logos } from "@/components/ui/_logos";
-import {
-  BeamCircle,
-  BeamsConnecting,
-  BeamsConnectingContainer,
-} from "@/components/ui/beams-connecting";
-import { useRef } from "react";
+interface ImageLoaderProps {
+  src: string;
+  width: number;
+  quality?: number;
+}
+
+const imageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
+  return `/images/${src}?w=${width}&q=${quality || 75}`;
+};
 
 export default function Home() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const div1Ref = useRef<HTMLDivElement>(null);
-  const div2Ref = useRef<HTMLDivElement>(null);
-  const div3Ref = useRef<HTMLDivElement>(null);
-  const div4Ref = useRef<HTMLDivElement>(null);
-  const div5Ref = useRef<HTMLDivElement>(null);
-  const div6Ref = useRef<HTMLDivElement>(null);
-  const div7Ref = useRef<HTMLDivElement>(null);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <Card className="w-full">
-          <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
-        </Card>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-
-        <BeamsConnectingContainer ref={containerRef}>
-          <div className="flex h-full w-full flex-col items-stretch justify-between gap-10">
-            <div className="flex flex-row items-center justify-between">
-              <BeamCircle ref={div1Ref}>
-                <Logos.framerMotion className="size-6" />
-              </BeamCircle>
-              <BeamCircle ref={div5Ref}>
-                <Logos.shadcn className="size-6 text-neutral-950" />
-              </BeamCircle>
-            </div>
-            <div className="flex flex-row items-center justify-between">
-              <BeamCircle ref={div2Ref}>
-                <Logos.aceternity className="size-6 text-neutral-950" />
-              </BeamCircle>
-              <BeamCircle ref={div4Ref} className="size-16">
-                <Logos.everUI className="size-10" />
-              </BeamCircle>
-              <BeamCircle ref={div6Ref}>
-                <Logos.nextJs className="size-6" />
-              </BeamCircle>
-            </div>
-            <div className="flex flex-row items-center justify-between">
-              <BeamCircle ref={div3Ref}>
-                <Logos.lucideReact className="size-6" />
-              </BeamCircle>
-              <BeamCircle ref={div7Ref}>
-                <Logos.tailwind className="size-6" />
-              </BeamCircle>
+    <div className="bg-black text-white">
+      <header className="relative h-screen bg-[url('../../public/images/hero-bg.png')] bg-cover bg-center bg-no-repeat">
+        <nav className="w-full flex justify-between py-8 px-16">
+          <div className="inline flex items-center">
+            <span>
+              <Image
+                loader={imageLoader}
+                src="/gif/logo_navbar.gif"
+                alt="Logo"
+                className="inline mx-3"
+                width={50}
+                height={50}
+              />
+            </span>
+            <p className="font-trapp font-medium text-xl inline">
+              <span className="text-[#FFC654]">C</span>{" "}
+              <span className="text-[#AACC4C]">i</span> <span>M</span>{" "}
+              <span className="text-[#27AAE1]">o</span>
+            </p>
+          </div>
+          <div className="inline">
+            <div className="flex gap-x-12">
+              <div className="flex items-center">
+                <p className="font-trapp font-medium text-xl inline">Panduan</p>
+              </div>
+              <div className="flex items-center">
+                <p className="font-trapp font-medium text-xl inline">
+                  Go To City
+                </p>
+                <span>
+                  <Image
+                    src="/images/arrow-navbar.png"
+                    alt="Arrow"
+                    className="inline mx-3"
+                    width={15}
+                    height={15}
+                  />
+                </span>
+              </div>
+              <div></div>
             </div>
           </div>
+        </nav>
+        <div className="px-16 py-16">
+          <h1 className="font-trapp text-8xl font-bold">
+            Manage your{" "}
+            <span className="font-trapp text-yellow-500 text-8xl font-bold">
+              money
+            </span>
+            <br />
+            like build a city
+          </h1>
+          <p className="font-poppins font-light py-5 text-black-rgba">
+            Bangun pondasi keuanganmu, satu
+            <br />
+            keputusan finansial pada satu waktu.
+          </p>
 
-          <BeamsConnecting
-            containerRef={containerRef}
-            fromRef={div1Ref}
-            toRef={div4Ref}
-            curvature={-75}
-            endYOffset={-10}
-          />
-          <BeamsConnecting
-            containerRef={containerRef}
-            fromRef={div2Ref}
-            toRef={div4Ref}
-          />
-          <BeamsConnecting
-            containerRef={containerRef}
-            fromRef={div3Ref}
-            toRef={div4Ref}
-            curvature={75}
-            endYOffset={10}
-          />
-          <BeamsConnecting
-            containerRef={containerRef}
-            fromRef={div5Ref}
-            toRef={div4Ref}
-            curvature={-75}
-            reverse
-            endYOffset={-10}
-          />
-          <BeamsConnecting
-            containerRef={containerRef}
-            fromRef={div6Ref}
-            toRef={div4Ref}
-            reverse
-          />
-          <BeamsConnecting
-            containerRef={containerRef}
-            fromRef={div7Ref}
-            toRef={div4Ref}
-            curvature={75}
-            reverse
-            endYOffset={10}
-          />
-        </BeamsConnectingContainer>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <a
+            className="group relative inline-block focus:outline-none focus:ring text-black my-5"
+            href="#"
+          >
+            <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#79995A] rounded-lg transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></span>
+            <span className="relative inline-block border-2 border-current px-7 py-3 text-sm font-bold uppercase tracking-widest rounded-lg bg-[#FFC654] transition-shadow group-focus:shadow-[#79995A]">
+              <p className="font-trapp">Bangun Kotamu</p>
+            </span>
+          </a>
+        </div>
+      </header>
+
+      <section className="h-screen grid grid-rows-2">
+        <div className="grid grid-cols-2">
+          <div className="col-1"></div>
+          <div className="col-2 content-center grid justify-items-center">
+            <h2 className="font-trapp text-5xl font-bold">
+              Kembangkan Kotamu
+              <br />
+              Dan Raih Tujuan Untuk
+              <br />
+              Pembagian Keuangan
+              <br />
+              Yang Efektif
+            </h2>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          <div className="col-1">
+            <Image
+              loader={imageLoader}
+              src="drone-homepage.png"
+              alt="Drone"
+              width={500}
+              height={500}
+              className="flex inline-flex me-20"
+            />
+            <p className="font-poppins text-base font-light flex inline-flex text-black-rgba">
+              Rancang strategi keuangan yang baik sambil menikmati <br />{" "}
+              pengalaman bermain yang seru. Membagi antara <br /> berbagai
+              kebutuhan yang kamu butuhkan dan <br /> kebutuhan yang kamu
+              inginkan, serta sebagai pengingat <br />
+              akan berbagai hal terkait keuangan yang sering kamu <br />{" "}
+              lupakan.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="h-screen flex items-center justify-center">
+        <div className="row grid grid-cols-3 gap-x-56 flex items-center justify-center">
+          <div className="col-1 px-32">
+            <h3 className="font-trapp text-5xl font-bold tracking-wide mb-12">
+              Tujuan City Of Money.
+            </h3>
+            <p className="font-poppins text-base font-light text-black-rgba">
+              Membangun kota mu sendiri sebagai bagian dari program tabunganmu
+              Membangun kota mu sendiri sebagai bagian dari program tabunganmu
+              Membangun kota mu sendiri sebagai bagian dari program tabunganmu
+              Membangun kota mu sendiri sebagai bagian dari
+            </p>
+          </div>
+          <div className="col-2">
+            <Image
+              loader={imageLoader}
+              src="/gif/menara_bank.gif"
+              alt="Menara Bank"
+              width={300}
+              height={300}
+            />
+          </div>
+          <div className="col-3 grid grid-rows-3 gap-y-24">
+            <div className="row-1">
+              <Image
+                loader={imageLoader}
+                src="200k.png"
+                alt="200K"
+                width={186}
+                height={53}
+              />
+              <p className="font-poppins text-base font-light text-black-rgba">
+                Orang terjebak dalam judi <br /> online di Indonesia
+              </p>
+            </div>
+            <div className="row-2">
+              <Image
+                loader={imageLoader}
+                src="40_persen.png"
+                alt="40 Persen"
+                width={135}
+                height={53}
+              />
+              <p className="font-poppins text-base font-light text-black-rgba">
+                Generasi muda (19-34 tahun) <br /> menggunakan pinjaman online{" "}
+                <br /> untuk gaya hidup.
+              </p>
+            </div>
+            <div className="row-3">
+              <Image
+                loader={imageLoader}
+                src="30_persen.png"
+                alt="30 Persen"
+                width={135}
+                height={53}
+              />
+              <p className="font-poppins text-base font-light text-black-rgba">
+                Masyarakat Indonesia tidak memiliki <br /> dana cadangan yang
+                cukup untuk <br /> bertahan lebih dari satu bulan
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="h-screen flex gap-1.5 items-center justify-center mt-28">
+        <div
+          className="card w-[390px] h-[443px] bg-cover bg-center flex items-center justify-center content-center"
+          style={{ backgroundImage: "url('/images/card1.png')" }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <div>
+            <h4 className="font-trapp text-3xl font-bold tracking-wide mb-14">
+              Tracking <br /> Pengeluaran dan <br /> Pemasukan.
+            </h4>
+            <p className="font-poppins text-base font-light text-black-rgba">
+              Pantau arus kas dari <br /> berbagai rekening bankmu <br /> secara
+              real-time dalam satu <br />
+              dashboard yang mudah <br /> diakses.
+            </p>
+          </div>
+        </div>
+
+        <div className="card w-[390px] h-[443px] bg-[#272323] flex items-center justify-center content-center">
+          <div>
+            <h4 className="font-trapp text-3xl font-bold tracking-wide mb-14">
+              Manage Uang <br /> dengan Formula <br /> yang Dianjurkan
+            </h4>
+            <p className="font-poppins text-base font-light text-black-rgba">
+              Atur keuanganmu dengan <br /> formula dan pembagian <br /> yang
+              tepat, sehingga tujuan <br />
+              keuanganmu lebih mudah <br /> tercapai.
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="card w-[390px] h-[443px] bg-cover bg-center flex items-center justify-center content-center px-16"
+          style={{ backgroundImage: "url('/images/card3.png')" }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div>
+            <h4 className="font-trapp text-3xl font-bold tracking-wide mb-14">
+              Gamify Menjadi Lebih <br /> Menyenangkan
+            </h4>
+            <p className="font-poppins text-base font-light text-black-rgba">
+              Ubah proses manajemen <br /> keuangan yang membosankan <br />{" "}
+              menjadi pengalaman bermain <br />
+              yang menyenangkan dan <br /> mendidik.
+            </p>
+          </div>
+        </div>
+
+        <div className="card w-[390px] h-[443px] bg-[#272323] flex items-center justify-center px-16">
+          <div>
+            <h4 className="font-trapp text-3xl font-bold tracking-wide mb-14">
+              Level Up <br /> Financial Skills
+            </h4>
+            <p className="font-poppins text-base font-light text-black-rgba">
+              Tingkatkan keterampilan keuanganmu melalui tantangan dan misi yang
+              semakin kompleks, menambah wawasan dan kemampuanmu dalam mengelola
+              uang.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
