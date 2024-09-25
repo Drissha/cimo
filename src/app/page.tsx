@@ -1,4 +1,6 @@
 "use client";
+import { DemoBeamsConnecting_Converge } from "@/components/BeamConnection";
+import { TextRevealCardDemo } from "@/components/TextReveal";
 import Image from "next/image";
 
 interface ImageLoaderProps {
@@ -257,7 +259,11 @@ export default function Home() {
         </div>
         <div className="col-2 items-center">
           <h3 className="font-trapp text-5xl font-bold tracking-wide mb-14 text-white">
-            Investasikan sisa <br /> keuanganmu dengan <br /> pilihan yang bijak
+            Investasikan{" "}
+            <span className="text-black-rgba">
+              sisa <br /> keuanganmu dengan <br /> pilihan yang
+            </span>{" "}
+            bijak
           </h3>
           <div className="grid grid-rows-3 gap-12">
             <a
@@ -328,8 +334,9 @@ export default function Home() {
 
       <section className="h-[850px] bg-[#252121]">
         <div className="row grid grid-rows-1">
-          <h3 className="font-trapp text-5xl font-bold tracking-wide mb-14 pt-28 text-white text-center">
-            Dengan Element <br /> Mudah Berinteraksi
+          <h3 className="font-trapp text-5xl font-bold tracking-wide mb-14 pt-28 text-center text-black-rgba">
+            Dengan <span className="text-white">Element</span> <br /> Mudah
+            Berinteraksi
           </h3>
         </div>
 
@@ -396,23 +403,19 @@ export default function Home() {
       </section>
 
       <section className="h-screen ">
-        <h3 className="font-trapp text-5xl font-bold tracking-wide mb-14 pt-40 text-white text-center">
-          Semua Dalam Satu <br /> Kota Yang Sama
+        <h3 className="font-trapp text-5xl font-bold tracking-wide mb-14 pt-40 text-black-rgba text-center">
+          Semua Dalam Satu <br /> <span className="text-white">Kota</span> Yang
+          Sama
         </h3>
         <div className="flex items-center justify-center">
-          <Image
-            src="/images/lancah.png"
-            alt="lancah"
-            className="text-center"
-            width={570}
-            height={350}
-          />
+          <DemoBeamsConnecting_Converge />
         </div>
       </section>
 
       <div className="row grid-rows-1 px-40">
-        <h3 className="font-trapp text-5xl font-bold tracking-wide text-white">
-          Pertanyaan Yang <br /> Sering Ditanyakan
+        <h3 className="font-trapp text-5xl font-bold tracking-wide text-black-rgba">
+          Pertanyaan Yang <br /> <span className="text-white">Sering</span>{" "}
+          Ditanyakan
         </h3>
       </div>
 
@@ -466,9 +469,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-screen grid grid-rows-1 justify-center items-center">
+      <section className="h-[450px] grid grid-rows-1 justify-center items-center">
         <h1 className="font-trapp text-6xl font-semibold text-center">
-          Saya Malas Untuk Mengelola Keuangan
+          <TextRevealCardDemo />
         </h1>
       </section>
 

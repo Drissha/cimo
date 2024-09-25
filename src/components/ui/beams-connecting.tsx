@@ -6,11 +6,11 @@ import { clx } from "@/lib/utils/clx/clx-merge";
 import { cn } from "@/lib/utils/core/cn";
 
 export const BeamCircle = clx.div(
-  "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+  "z-10 flex size-16 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
 );
 
 export const BeamsConnectingContainer = clx.div(
-  "relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl",
+  "relative flex w-full max-w-[700px] items-center justify-center overflow-hidden rounded-lg bg-background p-10 md:shadow-xl"
 );
 
 export type BeamsConnectingProps = {
@@ -82,10 +82,14 @@ export function BeamsConnecting({
         const svgHeight = containerRect.height;
         setSvgDimensions({ width: svgWidth, height: svgHeight });
 
-        const startX = rectA.left - containerRect.left + rectA.width / 2 + startXOffset;
-        const startY = rectA.top - containerRect.top + rectA.height / 2 + startYOffset;
-        const endX = rectB.left - containerRect.left + rectB.width / 2 + endXOffset;
-        const endY = rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
+        const startX =
+          rectA.left - containerRect.left + rectA.width / 2 + startXOffset;
+        const startY =
+          rectA.top - containerRect.top + rectA.height / 2 + startYOffset;
+        const endX =
+          rectB.left - containerRect.left + rectB.width / 2 + endXOffset;
+        const endY =
+          rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
 
         const controlY = startY - curvature;
         const d = `M ${startX},${startY} Q ${
@@ -135,7 +139,7 @@ export function BeamsConnecting({
       xmlns="http://www.w3.org/2000/svg"
       className={cn(
         "pointer-events-none absolute left-0 top-0 transform-gpu stroke-2",
-        className,
+        className
       )}
       viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
     >
