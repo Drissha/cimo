@@ -95,7 +95,7 @@ export default function ModalPajak({ open, onClose }: ModalProps) {
 
       {/* Modal Content */}
       <div className="fixed inset-0 z-10 overflow-y-auto">
-        <div className="flex 2xl:w-3/6 mx-auto min-h-full items-center justify-center p-4">
+        <div className="flex mx-auto min-h-full items-center justify-center p-4">
           <DialogPanel className="relative bg-[#080A0E] text-[#FFFFFF] rounded-lg shadow-xl">
             <div className="grid grid-cols-2">
               <div className="left p-10">
