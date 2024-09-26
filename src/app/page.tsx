@@ -107,7 +107,7 @@ export default function Home() {
               className="max-sm:w-1/2 md:mx-0 mx-auto md:my-0 my-5"
             />
           </div>
-          <div className="col-3 grid md:grid-rows-3 grid-cols-2 md:p-0 p-5 md:gap-y-24 gap-10 justify-center">
+          <div className="col-3 grid md:grid-rows-3 grid-rows-2 md:p-0 p-5 md:gap-y-24 gap-10 justify-center">
             <div className="row-1">
               <Image
                 loader={imageLoader}
