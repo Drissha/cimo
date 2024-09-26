@@ -124,9 +124,9 @@ export default function Home() {
 
       <section className="h-screen flex items-center justify-center">
         <div className="row grid grid-cols-3 gap-x-56 flex items-center justify-center">
-          <div className="col-1 px-32">
+          <div className="col-1 flex flex-col pl-20">
             <h3 className="font-trapp text-5xl font-bold tracking-wide mb-12">
-              Tujuan City Of Money.
+              Tujuan <br /> City Of <br /> Money.
             </h3>
             <p className="font-poppins text-base font-light text-black-rgba">
               Membangun kota mu sendiri sebagai bagian dari program tabunganmu
