@@ -24,10 +24,10 @@ const TextRevealCardContainer = clx.div(
   "relative flex h-40 items-center overflow-hidden"
 );
 const RevealText = clx.p(
-  "bg-gradient-to-b from-white to-neutral-300 bg-clip-text py-10 text-base font-bold text-transparent text-white sm:text-[3rem]"
+  "bg-gradient-to-b from-white to-neutral-300 bg-clip-text md:py-10 font-bold text-transparent text-white md:text-[3rem] text-[1.2rem] ml-10"
 );
 const NormalText = clx.p(
-  "bg-[#323238] bg-clip-text py-10 text-base font-bold text-transparent sm:text-[3rem]"
+  "bg-[#323238] bg-clip-text md:py-10 font-bold text-transparent md:text-[3rem] text-[1.2rem] ml-10"
 );
 const MaskOverflow = clx.div(
   "overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"
