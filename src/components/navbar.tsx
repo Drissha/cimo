@@ -28,8 +28,9 @@ export default function Navbar() {
           </span>
           <p className="font-trapp font-medium text-xl inline">
             <span className="text-[#FFC654]">C</span>{" "}
-            <span className="text-[#AACC4C]">i</span> <span>M</span>{" "}
-            <span className="text-[#27AAE1]">o</span>
+            <span className="text-[#ffffff]">i</span>{" "}
+            <span className="text-[#AACC4C]">M</span>{" "}
+            <span className="text-[#ffffff]">o</span>
           </p>
         </div>
       </Link>

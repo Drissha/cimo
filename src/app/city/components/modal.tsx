@@ -74,6 +74,18 @@ export default function Modal({ open, onClose, selectedImage }: ModalProps) {
                     className="ms-2 w-[25px] h-[25px]"
                   />
                 </span>
+              ) : selectedImage && selectedImage.alt === "kucing" ? (
+                <span className="flex items-center text-[#FEC537] me-10">
+                  Depo lagi Depo Lagi{" "}
+                  <Image
+                    loader={imageLoader}
+                    src="Awas.gif"
+                    alt="warning"
+                    width={20}
+                    height={20}
+                    className="ms-2 w-[25px] h-[25px]"
+                  />
+                </span>
               ) : (
                 <span className="flex">
                   <span className="flex items-center text-[#DDE65C] me-10">
@@ -227,6 +239,48 @@ export default function Modal({ open, onClose, selectedImage }: ModalProps) {
                   <div className="bg-[#333333] p-3 mt-5 w-fit">
                     <p className="text-[#FEC537]">
                       #Apakah Kamu sedang ada masalah finansial ?
+                    </p>
+                  </div>
+                  <div className="flex">
+                    <button className="bg-[#9FB366] px-8 py-3 text-black mt-1 mr-1">
+                      Ya
+                    </button>
+                    <button className="bg-[#FA5C52] px-8 py-3 text-black mt-1">
+                      Tidak
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : selectedImage && selectedImage.alt === "kucing" ? (
+              <div className="grid grid-cols-2 items-center justify-items-center">
+                <div className="left">
+                  <Image
+                    loader={imageLoader}
+                    src="petir.png"
+                    alt={selectedImage.alt}
+                    width={200}
+                    height={200}
+                    className="mt-10 mb-[8rem]"
+                  />
+                  <Image
+                    loader={imageLoader}
+                    src="neko.gif"
+                    alt={selectedImage.alt}
+                    width={200}
+                    height={200}
+                    className="absolute bottom-20 right-50"
+                  />
+                </div>
+                <div className="right">
+                  <div className="mt-5">
+                    <h4 className="text-xl">
+                      Transaksi Pengeluaran kamu <br /> terdeteksi anomali yang
+                      merujuk pada <br /> website Judi Online !
+                    </h4>
+                  </div>
+                  <div className="bg-[#333333] p-3 mt-5 w-fit">
+                    <p className="text-[#FEC537]">
+                      Apakah Kamu Terjerumus Judi Online ?
                     </p>
                   </div>
                   <div className="flex">

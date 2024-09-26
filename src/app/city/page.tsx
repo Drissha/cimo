@@ -148,11 +148,12 @@ export default function City() {
 
             <Image
               loader={imageLoader}
-              src="juan.gif"
-              alt="Kuda"
+              src="neko.gif"
+              alt="Kucing Cina"
               width={80}
               height={80}
-              className="absolute right-[8rem] bottom-[6rem]"
+              className="absolute right-[8rem] bottom-[6rem] cursor-pointer hover:scale-105"
+              onClick={() => handleImageClick("kucing")}
             />
 
             <Image
