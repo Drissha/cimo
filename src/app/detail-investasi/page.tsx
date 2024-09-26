@@ -186,8 +186,8 @@ export default function Stats() {
                     dalam pool yang ada di <br /> platform DeFi (Decentralized
                     Finance). <br />
                     Dengan kata lain, Anda menyumbangkan <br /> aset kripto Anda
-                    ke dalam sebuah "kolam" <br /> yang digunakan untuk
-                    melakukan <br />
+                    ke dalam sebuah &quot;kolam&quot; <br /> yang digunakan
+                    untuk melakukan <br />
                     pertukaran aset.
                   </p>
                 </div>
