@@ -1,7 +1,10 @@
 "use client";
 import { DemoBeamsConnecting_Converge } from "@/components/BeamConnection";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import { TextRevealCardDemo } from "@/components/TextReveal";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ImageLoaderProps {
   src: string;
@@ -17,49 +20,7 @@ export default function Home() {
   return (
     <div className="bg-black text-white">
       <header className="relative h-screen bg-[url('../../public/images/hero-bg.png')] bg-cover bg-center bg-no-repeat">
-        <nav className="w-full flex justify-between py-8 px-16">
-          <div className="inline flex items-center">
-            <span>
-              <Image
-                loader={imageLoader}
-                src="/gif/logo_navbar.gif"
-                alt="Logo"
-                className="inline mx-3"
-                width={50}
-                height={50}
-              />
-            </span>
-            <p className="font-trapp font-medium text-xl inline">
-              <span className="text-[#FFC654]">C</span>{" "}
-              <span className="text-[#ffffff]">i</span>
-              <span className="text-[#9FB366]">M</span>{" "}
-              <span className="text-[#ffffff]">o</span>
-            </p>
-          </div>
-          <div className="inline">
-            <div className="flex gap-x-12">
-              <div className="flex items-center">
-                <p className="font-trapp font-medium text-xl inline">Panduan</p>
-              </div>
-
-              <div className="flex items-center">
-                <p className="font-trapp font-medium text-xl inline">
-                  Go To City
-                </p>
-                <span>
-                  <Image
-                    src="/images/arrow-navbar.png"
-                    alt="Arrow"
-                    className="inline mx-3"
-                    width={15}
-                    height={15}
-                  />
-                </span>
-              </div>
-              <div></div>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
         <div className="px-16 py-16">
           <h1 className="font-trapp text-8xl font-bold">
             Manage your{" "}
@@ -75,15 +36,15 @@ export default function Home() {
             keputusan finansial pada satu waktu.
           </p>
 
-          <a
+          <Link
             className="group relative inline-block focus:outline-none focus:ring text-black my-5"
-            href="#"
+            href="/city"
           >
             <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#FFFFFF] rounded-[8px] transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></span>
             <span className="relative inline-block border-2 border-current px-7 py-3 text-sm font-bold uppercase tracking-widest rounded-[8px] bg-[#FFC654] transition-shadow group-focus:shadow-[#79995A]">
               <p className="font-trapp">Bangun Kotamu</p>
             </span>
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -268,9 +229,9 @@ export default function Home() {
             bijak
           </h3>
           <div className="grid grid-rows-3 gap-12">
-            <a
+            <Link
               className="group relative inline-block focus:outline-none focus:ring text-black"
-              href="#"
+              href="/detail-investasi"
             >
               <span className="w-[340px] relative rounded-[8px] inline-block border-2 border-current px-7 py-4 text-sm font-bold uppercase tracking-widest bg-[#FFC654] shadow-[8px_8px_0px_0px_#40413F] transition-transform group-hover:shadow-none">
                 <p className="font-trapp text-lg inline">
@@ -287,11 +248,11 @@ export default function Home() {
                   </span>
                 </p>
               </span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               className="group relative inline-block focus:outline-none focus:ring text-black"
-              href="#"
+              href="/detail-investasi"
             >
               <span className="w-[340px] relative inline-block border-2 border-current px-7 py-4 text-sm font-bold uppercase tracking-widest rounded-[8px] bg-[#7DD2E3] shadow-[8px_8px_0px_0px_#40413F] transition-transform group-hover:shadow-none">
                 <p className="font-trapp text-lg">
@@ -308,11 +269,11 @@ export default function Home() {
                   </span>
                 </p>
               </span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               className="group relative inline-block focus:outline-none focus:ring text-black"
-              href="#"
+              href="/detail-investasi"
             >
               <span className="w-[340px] relative inline-block border-2 border-current px-7 py-4 text-sm font-bold uppercase tracking-widest rounded-[8px] bg-[#EC584F] shadow-[8px_8px_0px_0px_#40413F] transition-transform group-hover:shadow-none">
                 <p className="font-trapp text-lg">
@@ -329,7 +290,7 @@ export default function Home() {
                   </span>
                 </p>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -492,9 +453,9 @@ export default function Home() {
                 sebagai bagian dari.
               </p>
 
-              <a
+              <Link
                 className="group relative inline-block focus:outline-none focus:ring text-black"
-                href="#"
+                href="/city"
               >
                 <span className="relative inline-block border-2 border-current px-5 py-2 text-sm font-bold uppercase tracking-widest rounded-[6px] bg-[#FFC654]">
                   <p className="font-trapp inline">
@@ -510,7 +471,7 @@ export default function Home() {
                     </span>
                   </p>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -526,92 +487,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer">
-        <nav className="w-full flex justify-between items-end px-28">
-          <div className="inline flex-1">
-            <h5 className="font-trapp text-xl font-bold mb-5">
-              City Of Money.
-            </h5>
-            <p className="font-poppins font-thin text-sm mb-5 text-black-rgba">
-              Copyright All Right Reserve 2024
-            </p>
-            <Image
-              src="/images/gif/logo_footer.gif"
-              alt="Logo Footer"
-              width={100}
-              height={50}
-            />
-          </div>
-
-          <div className="py-28 px-64">
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Visualisasi Kota
-              </p>
-              <span>
-                <Image
-                  src="/images/arrow-navbar.png"
-                  alt="Arrow Navbar"
-                  className="inline mx-3"
-                  width={20}
-                  height={20}
-                />
-              </span>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Management Uang
-              </p>
-              <span>
-                <Image
-                  src="/images/arrow-navbar.png"
-                  alt="Arrow Navbar"
-                  className="inline mx-3"
-                  width={20}
-                  height={20}
-                />
-              </span>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Tips Dan Trick
-              </p>
-              <span>
-                <Image
-                  src="/images/arrow-navbar.png"
-                  alt="Arrow Navbar"
-                  className="inline mx-3"
-                  width={20}
-                  height={20}
-                />
-              </span>
-            </div>
-          </div>
-
-          <div className="developer py-28 px-20">
-            <div className="block mb-3">
-              <p className="font-poppins font-medium text-lg inline">
-                Developers
-              </p>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Teguh Iqbal Prayoga
-              </p>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Rifqi Ahmad Abiyyi
-              </p>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Rian Alfazri Khoirulah
-              </p>
-            </div>
-          </div>
-        </nav>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,8 @@
 "use client";
+
 import { useState } from "react";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import Image from "next/image";
 
 interface ImageLoaderProps {
@@ -408,55 +411,7 @@ export default function Stats() {
   return (
     <main className="bg-[#252121] text-white">
       <header>
-        <nav className="w-full flex justify-between py-8 px-16">
-          <div className="inline flex items-center">
-            <span>
-              <Image
-                loader={imageLoader}
-                src="/gif/logo_navbar.gif"
-                alt="Logo Navbar"
-                width={50}
-                height={50}
-                className="inline mx-3"
-              />
-            </span>
-            <p className="font-trapp font-medium text-xl inline">
-              <span className="text-[#FFC654]">C</span>{" "}
-              <span className="text-[#AACC4C]">i</span> <span>M</span>{" "}
-              <span className="text-[#27AAE1]">o</span>
-            </p>
-          </div>
-          <div className="inline">
-            <div className="flex gap-x-12">
-              <div className="flex items-center">
-                <p className="font-trapp font-medium text-xl inline">Panduan</p>
-              </div>
-              <div className="flex items-center">
-                <p className="font-trapp font-medium text-xl inline">
-                  Go To City
-                </p>
-                <span>
-                  <Image
-                    loader={imageLoader}
-                    src="arrow-navbar.png"
-                    alt="Arrow Navbar"
-                    width={20}
-                    height={20}
-                    className="inline mx-3"
-                  />
-                </span>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  className="font-trapp font-bold text-lg text-gray-900 bg-[#FFC654] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 rounded-lg px-7 py-1.5 text-center"
-                >
-                  Login
-                </button>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
       </header>
 
       <main>
@@ -683,92 +638,9 @@ export default function Stats() {
         </section>
       </main>
 
-      <footer className="footer mt-60">
-        <nav className="w-full flex justify-between items-end px-28">
-          <div className="inline flex-1">
-            <h5 className="font-trapp text-xl font-bold mb-5">
-              City Of Money.
-            </h5>
-            <p className="font-poppins font-thin text-sm mb-5 text-black-rgba">
-              Copyright All Right Reserve 2024
-            </p>
-            <Image
-              src="/images/gif/logo_footer.gif"
-              alt="Logo Footer"
-              width={100}
-              height={50}
-            />
-          </div>
 
-          <div className="py-28 px-64">
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Visualisasi Kota
-              </p>
-              <span>
-                <Image
-                  src="/images/arrow-navbar.png"
-                  alt="Arrow Navbar"
-                  className="inline mx-3"
-                  width={20}
-                  height={20}
-                />
-              </span>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Management Uang
-              </p>
-              <span>
-                <Image
-                  src="/images/arrow-navbar.png"
-                  alt="Arrow Navbar"
-                  className="inline mx-3"
-                  width={20}
-                  height={20}
-                />
-              </span>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Tips Dan Trick
-              </p>
-              <span>
-                <Image
-                  src="/images/arrow-navbar.png"
-                  alt="Arrow Navbar"
-                  className="inline mx-3"
-                  width={20}
-                  height={20}
-                />
-              </span>
-            </div>
-          </div>
+      <Footer />
 
-          <div className="developer py-28 px-20">
-            <div className="block mb-3">
-              <p className="font-poppins font-medium text-lg inline">
-                Developers
-              </p>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Teguh Iqbal Prayoga
-              </p>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Rifqi Ahmad Abiyyi
-              </p>
-            </div>
-            <div className="block mb-5">
-              <p className="font-poppins font-medium text-sm inline">
-                Rian Alfazri Khoirulah
-              </p>
-            </div>
-          </div>
-        </nav>
-      </footer>
     </main>
   );
 }

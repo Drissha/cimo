@@ -145,7 +145,7 @@ export default function ModalPajak({ open, onClose }: ModalProps) {
       <DialogBackdrop className="fixed inset-0 bg-gray-900 bg-opacity-85" />
 
       {/* Modal Content */}
-      <div className="fixed inset-0 z-10 overflow-y-auto">
+      <div className="fixed inset-0 z-[100] overflow-y-auto">
         <div className="flex w-[80%] m-auto min-h-full items-center justify-center p-4">
           <DialogPanel className="relative bg-[#272323] text-[#FFFFFF] rounded-lg shadow-xl">
             <div className="grid grid-cols-2">
