@@ -432,14 +432,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:h-[450px] md:w-[auto] w-full grid grid-rows-1 justify-center items-center overflow-hidden">
+      <section className="md:h-[450px] md:w-[auto] hidden md:block w-full grid grid-rows-1 justify-center items-center overflow-hidden">
         <h1 className="font-trapp text-6xl font-semibold text-center">
           <TextRevealCardDemo />
         </h1>
       </section>
 
-      <section className="md:h-screen grid grid-rows-1 justify-center items-center">
-        <div className="md:bg-[url('/images/bg_biru.png')] bg-[#7DD2E3] md:rounded-none rounded-xl md:w-[1596px] md:h-[626px] md:grid md:grid-cols-2 flex flex-col-reverse md:p-0 p-10">
+      <section className="md:h-screen grid grid-rows-1 md:mt-0 mt-10 justify-center items-center">
+        <div className="md:bg-[url('/images/bg_biru.png')] bg-[#7DD2E3] md:rounded-none rounded-xl md:w-full md:h-[626px] md:grid md:grid-cols-2 flex flex-col-reverse md:p-0 p-10">
           <div className="flex items-center justify-start">
             <div className="md:ps-32">
               <h4 className="font-trapp font-semibold md:text-5xl text-3xl text-[#2E2B2B] mb-5">
