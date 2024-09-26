@@ -1,12 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Modal from "./components/modal";
 import ModalPajak from "./components/modal_pajak";
 import Navbar from "./components/nav";
 import Image from "next/image";
 import "./css/style.css";
-import React, { useRef } from "react";
 import ModalBank from "./components/modal_bank";
+import Link from "next/link";
 
 interface ImageLoaderProps {
   src: string;
@@ -26,6 +26,11 @@ export default function City() {
     alt: string;
   } | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isAltPressed, setIsAltPressed] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleImageClick = (alt: string) => {
     setSelectedImage({ alt });
@@ -46,6 +51,49 @@ export default function City() {
     }
   };
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (isAltPressed && scrollContainerRef.current) {
+      setIsDragging(true);
+      setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+      setScrollLeft(scrollContainerRef.current.scrollLeft);
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust for scroll speed
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+  };
+
+  // Detect Alt key press and release to toggle cursor
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.altKey) {
+        setIsAltPressed(true);
+      }
+    };
+
+    const handleKeyUp = (e: KeyboardEvent) => {
+      if (!e.altKey) {
+        setIsAltPressed(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
+
   return (
     <main>
       <audio ref={audioRef}>
@@ -53,7 +101,17 @@ export default function City() {
         Your browser does not support the audio tag.
       </audio>
       <Navbar />
-      <div className="overflow-scroll w-100vw">
+      <div
+        className="overflow-scroll w-100vw"
+        ref={scrollContainerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUpOrLeave}
+        onMouseLeave={handleMouseUpOrLeave}
+        style={{
+          cursor: isAltPressed ? (isDragging ? "grabbing" : "grab") : "default",
+        }}
+      >
         <div className="w-[1912px] h-[912px] md:relative fixed bg-scroll h-[-webkit-fill-available] city">
           <div className="flex">
             <Image
@@ -105,14 +163,16 @@ export default function City() {
               onClick={() => handleImageClick("mobil oren")}
             />
 
-            <Image
-              loader={imageLoader}
-              src="entah.png"
-              alt="gedung cafe"
-              width={400}
-              height={400}
-              className="absolute left-[14.5%] top-[39%] cursor-pointer hover:scale-105"
-            />
+            <Link href="/quest">
+              <Image
+                loader={imageLoader}
+                src="entah.png"
+                alt="gedung cafe"
+                width={400}
+                height={400}
+                className="absolute left-[14.5%] top-[39%] cursor-pointer hover:scale-105"
+              />
+            </Link>
 
             <Image
               loader={imageLoader}
@@ -145,11 +205,12 @@ export default function City() {
 
             <Image
               loader={imageLoader}
-              src="juan.gif"
-              alt="Kuda"
+              src="neko.gif"
+              alt="Kucing Cina"
               width={80}
               height={80}
-              className="absolute right-[8rem] bottom-[6rem]"
+              className="absolute right-[8rem] bottom-[6rem] cursor-pointer hover:scale-105"
+              onClick={() => handleImageClick("kucing")}
             />
 
             <Image
