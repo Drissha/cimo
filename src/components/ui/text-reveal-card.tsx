@@ -21,7 +21,7 @@ const TextRevealCardRef = clx.div(
   "relative w-[80rem] overflow-hidden rounded-lg bg-black p-8 text-center"
 );
 const TextRevealCardContainer = clx.div(
-  "relative  flex h-40 items-center overflow-hidden"
+  "relative flex h-40 items-center overflow-hidden"
 );
 const RevealText = clx.p(
   "bg-gradient-to-b from-white to-neutral-300 bg-clip-text py-10 text-base font-bold text-transparent text-white sm:text-[3rem]"
@@ -47,11 +47,11 @@ export function TextRevealCard({
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
 
-  const cardRef = useRef(null);
+  // Define the ref type
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (cardRef.current) {
-      // @ts-expect-error: Ignore this error
       const { left, width: localWidth } =
         cardRef.current.getBoundingClientRect();
       setLeft(left);
@@ -59,23 +59,26 @@ export function TextRevealCard({
     }
   }, []);
 
-  function mouseMoveHandler(event: React.MouseEvent<HTMLDivElement>) {
+  const mouseMoveHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
 
     const { clientX } = event;
     if (cardRef.current) {
       const relativeX = clientX - left;
-      setWidthPercentage((relativeX / localWidth) * 100);
+      setWidthPercentage(
+        Math.max(0, Math.min(100, (relativeX / localWidth) * 100))
+      );
     }
-  }
+  };
 
-  function mouseLeaveHandler() {
+  const mouseLeaveHandler = () => {
     setIsMouseOver(false);
     setWidthPercentage(0);
-  }
-  function mouseEnterHandler() {
+  };
+
+  const mouseEnterHandler = () => {
     setIsMouseOver(true);
-  }
+  };
 
   const ROTATE_DEG = (widthPercentage - 50) * 0.1;
 
@@ -90,7 +93,7 @@ export function TextRevealCard({
 
       <TextRevealCardContainer>
         <motion.div
-          style={{ width: "70rem" }} // Lebar tetap untuk RevealText
+          style={{ width: "70rem" }} // Fixed width for RevealText
           animate={
             isMouseOver
               ? {
@@ -106,7 +109,7 @@ export function TextRevealCard({
         >
           <RevealText
             style={{
-              width: "70rem", // Pastikan lebar RevealText tetap
+              width: "70rem", // Ensure RevealText width remains constant
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
           >
@@ -133,7 +136,7 @@ export function TextRevealCard({
   );
 }
 
-//
+// Stars Component
 function Stars() {
   const randomMove = () => Math.random() * 4 - 2;
   const randomOpacity = () => Math.random();
