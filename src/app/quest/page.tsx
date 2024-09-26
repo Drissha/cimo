@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ImageLoaderProps {
   src: string;
@@ -15,19 +16,21 @@ export default function Stats() {
   return (
     <main className="bg-[#252121] text-white">
       <nav className="w-full flex justify-between py-8 px-16">
-        <div className="inline flex items-center gap-2">
-          <span>
-            <Image
-              loader={imageLoader}
-              src="panah_kembali.png"
-              width={20}
-              height={33}
-              alt="Celengan GIF"
-              className="inline mx-3 py-2"
-            />
-          </span>
-          <p className="font-poppins font-medium text-xl inline">Kembali</p>
-        </div>
+        <Link href="/city">
+          <div className="inline flex items-center gap-2">
+            <span>
+              <Image
+                loader={imageLoader}
+                src="panah_kembali.png"
+                width={20}
+                height={33}
+                alt="Celengan GIF"
+                className="inline mx-3 py-2"
+              />
+            </span>
+            <p className="font-poppins font-medium text-xl inline">Kembali</p>
+          </div>
+        </Link>
       </nav>
 
       <main>

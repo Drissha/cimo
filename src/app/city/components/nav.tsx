@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import ProgressBar from "./progressBar";
+import Link from "next/link";
 
 interface ImageLoaderProps {
   src: string;
@@ -17,13 +18,15 @@ export default function Navbar() {
     <nav className="navbar md:relative stiky z-[99] bg-black">
       <div className="flex items-center overflow-x-auto px-10 py-5">
         <div className="profile me-auto">
-          <Image
-            loader={imageLoader}
-            src="user.png"
-            alt="Picture of the author"
-            width={40}
-            height={40}
-          />
+          <Link href="/">
+            <Image
+              loader={imageLoader}
+              src="user.png"
+              alt="Picture of the author"
+              width={40}
+              height={40}
+            />
+          </Link>
         </div>
         <div className="button-group flex">
           <button className="relative text-black bg-[#EECE61] py-2 px-5 rounded-sm button-nav mx-5">

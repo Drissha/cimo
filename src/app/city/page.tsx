@@ -7,6 +7,7 @@ import Image from "next/image";
 import "./css/style.css";
 import React, { useRef } from "react";
 import ModalBank from "./components/modal_bank";
+import Link from "next/link";
 
 interface ImageLoaderProps {
   src: string;
@@ -105,14 +106,16 @@ export default function City() {
               onClick={() => handleImageClick("mobil oren")}
             />
 
-            <Image
-              loader={imageLoader}
-              src="entah.png"
-              alt="gedung cafe"
-              width={400}
-              height={400}
-              className="absolute left-[14.5%] top-[39%] cursor-pointer hover:scale-105"
-            />
+            <Link href="/quest">
+              <Image
+                loader={imageLoader}
+                src="entah.png"
+                alt="gedung cafe"
+                width={400}
+                height={400}
+                className="absolute left-[14.5%] top-[39%] cursor-pointer hover:scale-105"
+              />
+            </Link>
 
             <Image
               loader={imageLoader}
