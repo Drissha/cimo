@@ -27,7 +27,7 @@ export default function Modal({ open, onClose, selectedImage }: ModalProps) {
       <DialogBackdrop className="fixed inset-0 bg-gray-900 bg-opacity-85" />
 
       {/* Modal Content */}
-      <div className="fixed inset-0 z-10 overflow-y-auto">
+      <div className="fixed inset-0 z-[100] overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel className="relative bg-[#080A0E] text-[#FFFFFF] rounded-lg p-[4rem] shadow-xl">
             <h1 className="text-3xl">Transaksi Keuangan Kamu</h1>
