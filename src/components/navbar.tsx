@@ -13,9 +13,9 @@ const imageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex justify-between py-8 px-16">
+    <nav className="w-full md:flex block justify-between py-8 px-16">
       <Link href="/">
-        <div className="inline flex items-center">
+        <div className="inline flex items-center mb-3 md:mb-0">
           <span>
             <Image
               loader={imageLoader}
@@ -35,13 +35,13 @@ export default function Navbar() {
         </div>
       </Link>
       <div className="inline">
-        <div className="flex gap-x-12">
-          <div className="flex items-center">
+        <div className="flex md:gap-x-12">
+          <div className="flex items-center mx-auto md:mx-0">
             <Link href="/stats">
               <p className="font-trapp font-medium text-xl inline">Panduan</p>
             </Link>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center mx-auto md:mx-0">
             <p className="font-trapp font-medium text-xl inline">
               <Link href="/city">Go To City</Link>
             </p>

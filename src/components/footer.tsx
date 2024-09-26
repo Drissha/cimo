@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="footer">
-      <nav className="w-full flex justify-between items-end px-28">
+      <nav className="w-full flex md:flex-row flex-col-reverse md:justify-between md:items-end md:px-28 px-10">
         <div className="inline flex-1">
           <h5 className="font-trapp text-xl font-bold mb-5">City Of Money.</h5>
           <p className="font-poppins font-thin text-sm mb-5 text-black-rgba">
@@ -17,7 +17,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="py-28 px-64">
+        <div className="md:py-28 pb-10 md:px-64">
           <div className="block mb-5">
             <p className="font-poppins font-medium text-sm inline">
               Visualisasi Kota
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="developer py-28 px-20">
+        <div className="developer md:py-28 py-10 md:px-20">
           <div className="block mb-3">
             <p className="font-poppins font-medium text-lg inline">
               Developers
