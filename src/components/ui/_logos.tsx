@@ -2,76 +2,13 @@ type TLogo = React.SVGProps<SVGSVGElement>;
 import Image from "next/image";
 
 export const Logos = {
-  everUI: (props: TLogo) => (
-    <Image
-      src="/images/gif/coin.gif"
-      alt="Mobil"
-      className="pt-24"
-      width={570}
-      height={350}
-      {...props}
-    />
-  ),
-  aceternity: (props: TLogo) => (
-    <Image
-      src="/images/dana.png"
-      alt="Mobil"
-      className="pt-24"
-      width={570}
-      height={350}
-      {...props}
-    />
-  ),
-  tailwind: (props: TLogo) => (
-    <Image
-      src="/images/gopay.svg"
-      alt="Mobil"
-      className="pt-24"
-      width={570}
-      height={350}
-      {...props}
-    />
-  ),
-  framerMotion: (props: TLogo) => (
-    <Image
-      src="/images/bca.png"
-      alt="Mobil"
-      className="pt-24"
-      width={570}
-      height={350}
-      {...props}
-    />
-  ),
-  lucideReact: (props: TLogo) => (
-    <Image
-      src="/images/bni.png"
-      alt="Mobil"
-      className="pt-24"
-      width={570}
-      height={350}
-      {...props}
-    />
-  ),
-  nextJs: (props: TLogo) => (
-    <Image
-      src="/images/shoppe.png"
-      alt="Mobil"
-      className="pt-24"
-      width={570}
-      height={350}
-      {...props}
-    />
-  ),
-  shadcn: (props: TLogo) => (
-    <Image
-      src="/images/jiwasraya.png"
-      alt="Mobil"
-      className="pt-24"
-      width={32}
-      height={32}
-      {...props}
-    />
-  ),
+  everUI: (props: TLogo) => <img src="/images/gif/coin.gif" />,
+  aceternity: (props: TLogo) => <img src="/images/dana.png" />,
+  tailwind: (props: TLogo) => <img src="/images/gopay.svg" />,
+  framerMotion: (props: TLogo) => <img src="/images/bca.png" />,
+  lucideReact: (props: TLogo) => <img src="/images/bni.png" />,
+  nextJs: (props: TLogo) => <img src="/images/shoppe.png" />,
+  shadcn: (props: TLogo) => <img src="/images/jiwasraya.png" />,
   //
   //
   //
