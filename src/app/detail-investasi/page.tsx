@@ -57,7 +57,7 @@ export default function Stats() {
       </nav>
 
       <main>
-        <section className="flex flex-col">
+        <div className="flex flex-row justify-between">
           <div className="heading-stats px-32 pt-32 mb-16">
             <h3 className="font-trapp text-5xl font-bold tracking-wide mb-4">
               Investasi Crypto
@@ -83,10 +83,21 @@ export default function Stats() {
               </div>
             </div>
           </div>
+          <div className="image-investasi flex items-end">
+            <Image
+              src="/images/gif/investasi.gif"
+              alt="Logo Footer"
+              width={370}
+              height={282}
+              className=""
+            />
+          </div>
+        </div>
+        <div className="flex flex-col">
           <div className="row bg-[#333333] border-2 border-black h-screen flex justify-center items-center">
             <div className="flex flex-row gap-0">
-              <div className="card border-2 border-black h-[650px] w-[600px] flex flex-col justify-between">
-                <div className="description py-12 px-12">
+              <div className="card border-2 border-black h-[650px] flex flex-col justify-between">
+                <div className="description py-12 pr-40 pl-12">
                   <div className="flex flex-row">
                     <h4 className="font-trapp font-semibold text-2xl">
                       Staking
@@ -115,7 +126,7 @@ export default function Stats() {
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <div className="row border-y-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row border-y-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Keuntungan Staking
                     </p>
@@ -130,7 +141,7 @@ export default function Stats() {
                       />
                     </span>
                   </div>
-                  <div className="row border-b-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row border-b-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Resiko Staking
                     </p>
@@ -145,7 +156,7 @@ export default function Stats() {
                       />
                     </span>
                   </div>
-                  <div className="row bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Cara Kerja Staking
                     </p>
@@ -162,8 +173,8 @@ export default function Stats() {
                   </div>
                 </div>
               </div>
-              <div className="card border-2 border-black h-[650px] w-[600px] flex flex-col justify-between">
-                <div className="description py-12 px-12">
+              <div className="card border-2 border-black h-[650px] flex flex-col justify-between">
+                <div className="description py-12 pr-40 pl-12">
                   <div className="flex flex-row">
                     <h4 className="font-trapp font-semibold text-2xl">
                       Yield Farming
@@ -192,7 +203,7 @@ export default function Stats() {
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <div className="row border-y-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row border-y-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Keuntungan Yield Farming
                     </p>
@@ -207,7 +218,7 @@ export default function Stats() {
                       />
                     </span>
                   </div>
-                  <div className="row border-b-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row border-b-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Resiko Yield Farming
                     </p>
@@ -222,7 +233,7 @@ export default function Stats() {
                       />
                     </span>
                   </div>
-                  <div className="row bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Cara Kerja Yield Farming
                     </p>
@@ -239,8 +250,8 @@ export default function Stats() {
                   </div>
                 </div>
               </div>
-              <div className="card border-2 border-black h-[650px] w-[600px] flex flex-col justify-between">
-                <div className="description py-12 px-12">
+              <div className="card border-2 border-black h-[650px] flex flex-col justify-between">
+                <div className="description py-12 pr-40 pl-12">
                   <div className="flex flex-row">
                     <h4 className="font-trapp font-semibold text-2xl">
                       Lending
@@ -266,7 +277,7 @@ export default function Stats() {
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <div className="row border-y-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row border-y-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Keuntungan Lending
                     </p>
@@ -281,7 +292,7 @@ export default function Stats() {
                       />
                     </span>
                   </div>
-                  <div className="row border-b-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row border-b-2 border-black bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Resiko Lending
                     </p>
@@ -296,7 +307,7 @@ export default function Stats() {
                       />
                     </span>
                   </div>
-                  <div className="row bg-[#3E3E3F] py-4 flex flex-row px-6">
+                  <div className="row bg-[#3E3E3F] py-4 flex flex-row px-12">
                     <p className="font-poppins font-reguler text-xl">
                       Cara Kerja Lending
                     </p>
@@ -411,7 +422,7 @@ export default function Stats() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
 
       <footer className="footer">
