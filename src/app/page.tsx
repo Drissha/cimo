@@ -84,13 +84,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:h-screen mt-16 md:mt-0 flex items-center justify-center">
+      <section className="md:h-screen mt-16 md:mt-0 flex items-center justify-center pt-40">
         <div className="row grid md:grid-cols-3 md:gap-x-56 gap-x-5 items-center justify-center">
-          <div className="col-1 md:px-32 px-5">
-            <h3 className="font-trapp md:text-5xl text-3xl font-bold tracking-wide mb-12">
-              Tujuan City Of Money.
+          <div className="col-1 md:px-32 xl:px-0 px-32 flex flex-col">
+            <h3 className="font-trapp md:text-5xl text-3xl font-bold tracking-wide mb-12 xl:pl-20">
+              Tujuan <br /> City Of <br /> Money.
             </h3>
-            <p className="font-poppins text-base font-light text-black-rgba">
+            <p className="font-poppins text-base font-light text-black-rgba xl:pl-20">
               Membangun kota mu sendiri sebagai bagian dari program tabunganmu
               Membangun kota mu sendiri sebagai bagian dari program tabunganmu
               Membangun kota mu sendiri sebagai bagian dari program tabunganmu
@@ -375,7 +375,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="row grid-rows-1 md:px-40 px-10 md:mt-0 mt-24">
+      <div className="row grid-rows-1 md:px-40 xl:px-16 px-10 md:mt-0 xl:pt-28">
         <h3 className="font-trapp md:text-5xl text-3xl font-bold tracking-wide text-black-rgba">
           Pertanyaan Yang <br /> <span className="text-white">Sering</span>{" "}
           Ditanyakan
@@ -432,13 +432,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:h-[450px] md:w-[auto] hidden md:block w-full grid grid-rows-1 justify-center items-center overflow-hidden">
+      <section className="md:h-[450px] xl:h-[300px] md:w-[auto] hidden md:block w-full mt-12 grid grid-rows-1 justify-center items-center overflow-hidden">
         <h1 className="font-trapp text-6xl font-semibold text-center">
           <TextRevealCardDemo />
         </h1>
       </section>
 
-      <section className="md:h-screen grid grid-rows-1 md:mt-0 mt-10 justify-center items-center">
+      <section className="md:h-screen grid grid-rows-1 md:mt-0 mt-10 justify-center items-center px-20">
         <div className="md:bg-[url('/images/bg_biru.png')] bg-[#7DD2E3] md:rounded-none rounded-xl md:w-full md:h-[626px] md:grid md:grid-cols-2 flex flex-col-reverse md:p-0 p-10">
           <div className="flex items-center justify-start">
             <div className="md:ps-32">
