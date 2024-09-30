@@ -18,14 +18,16 @@ export default function Stats() {
       <nav className="w-full flex justify-between py-8 px-16">
         <div className="inline flex items-center gap-2">
           <span>
-            <Image
-              loader={imageLoader}
-              src="panah_kembali.png"
-              width={20}
-              height={20}
-              className=""
-              alt="Statistik"
-            />
+            <Link href="city">
+              <Image
+                loader={imageLoader}
+                src="panah_kembali.png"
+                width={20}
+                height={20}
+                className=""
+                alt="Statistik"
+              />
+            </Link>
           </span>
           <p className="font-poppins font-medium text-xl inline">Kembali</p>
         </div>
@@ -425,7 +427,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.800,000.000
+                        Rp.700,000.000
                       </p>
                     </div>
                   </div>
@@ -435,7 +437,7 @@ export default function Stats() {
                 <div className="flex flex-row gap-x-48">
                   <div className="flex flex-col">
                     <p className="flex font-poppins font-semibold text-white text-xl py-6">
-                      Rumah
+                      Sehatan
                     </p>
                   </div>
                   <div className="flex flex-row items-center gap-16">
@@ -471,7 +473,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.100,000.000
+                        Rp.120,000.000
                       </p>
                     </div>
                     <div className="flex flex-col">
@@ -491,7 +493,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.800,000.000
+                        Rp.860,000.000
                       </p>
                     </div>
                   </div>
@@ -501,7 +503,7 @@ export default function Stats() {
                 <div className="flex flex-row gap-x-48">
                   <div className="flex flex-col">
                     <p className="flex font-poppins font-semibold text-white text-xl py-6">
-                      Rumah
+                      Sekolah
                     </p>
                   </div>
                   <div className="flex flex-row items-center gap-16">
@@ -537,7 +539,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.100,000.000
+                        Rp.40,000.000
                       </p>
                     </div>
                     <div className="flex flex-col">
@@ -557,7 +559,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.800,000.000
+                        Rp.500,000.000
                       </p>
                     </div>
                   </div>
@@ -567,7 +569,7 @@ export default function Stats() {
                 <div className="flex flex-row gap-x-48">
                   <div className="flex flex-col">
                     <p className="flex font-poppins font-semibold text-white text-xl py-6">
-                      Rumah
+                      Darurat
                     </p>
                   </div>
                   <div className="flex flex-row items-center gap-16">
@@ -603,7 +605,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.100,000.000
+                        Rp.30,000.000
                       </p>
                     </div>
                     <div className="flex flex-col">
@@ -623,7 +625,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.800,000.000
+                        Rp.100,000.000
                       </p>
                     </div>
                   </div>
@@ -633,7 +635,7 @@ export default function Stats() {
                 <div className="flex flex-row gap-x-48">
                   <div className="flex flex-col">
                     <p className="flex font-poppins font-semibold text-white text-xl py-6">
-                      Rumah
+                      Hobby
                     </p>
                   </div>
                   <div className="flex flex-row items-center gap-16">
@@ -669,7 +671,7 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.100,000.000
+                        Rp.160,000.000
                       </p>
                     </div>
                     <div className="flex flex-col">
@@ -689,7 +691,73 @@ export default function Stats() {
                         </p>
                       </div>
                       <p className="font-poppins text-white text-sm font-light">
-                        Rp.800,000.000
+                        Rp.460,000.000
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="card px-4 border-2 border-black bg-[#3E3E3F]">
+                <div className="flex flex-row gap-x-48">
+                  <div className="flex flex-col">
+                    <p className="flex font-poppins font-semibold text-white text-xl py-6">
+                      Akhirat
+                    </p>
+                  </div>
+                  <div className="flex flex-row items-center gap-16">
+                    <div className="flex flex-col">
+                      <p className="font-trapp font-thin py-1 text-black-rgba">
+                        Progress
+                      </p>
+                      <span>
+                        <Image
+                          loader={imageLoader}
+                          src="progress_roblox.png"
+                          width={100}
+                          height={11}
+                          className=""
+                          alt="Statistik"
+                        />
+                      </span>
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="flex flex-row gap-2">
+                        <span>
+                          <Image
+                            loader={imageLoader}
+                            src="icon_pig_blue.png"
+                            width={20}
+                            height={20}
+                            className=""
+                            alt="Statistik"
+                          />
+                        </span>
+                        <p className="font-trapp font-thin text-sm py-1 text-black-rgba">
+                          Terkumpul
+                        </p>
+                      </div>
+                      <p className="font-poppins text-white text-sm font-light">
+                        Rp.160,000.000
+                      </p>
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="flex flex-row gap-2">
+                        <span>
+                          <Image
+                            loader={imageLoader}
+                            src="icon_pig_target.png"
+                            width={20}
+                            height={20}
+                            className=""
+                            alt="Statistik"
+                          />
+                        </span>
+                        <p className="font-trapp font-thin py-1 text-sm text-black-rgba">
+                          Target
+                        </p>
+                      </div>
+                      <p className="font-poppins text-white text-sm font-light">
+                        Rp.460,000.000
                       </p>
                     </div>
                   </div>
