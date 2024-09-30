@@ -124,15 +124,16 @@ export default function City() {
               onClick={() => handleImageClickBank()}
             />
 
-            <Image
-              loader={imageLoader}
-              src="drone.png"
-              alt="drone"
-              width={350}
-              height={350}
-              className="absolute left-[8%] top-[6rem] cursor-pointer drone hover:left-[7%] hover:w-96"
-            />
-
+            <Link href="/drone">
+              <Image
+                loader={imageLoader}
+                src="drone.png"
+                alt="drone"
+                width={350}
+                height={350}
+                className="absolute left-[8%] top-[6rem] cursor-pointer drone hover:left-[7%] hover:w-96"
+              />
+            </Link>
             <Image
               loader={imageLoader}
               src="mobil-merah.png"
