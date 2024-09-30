@@ -638,9 +638,7 @@ export default function Stats() {
         </section>
       </main>
 
-
       <Footer />
-
     </main>
   );
 }
