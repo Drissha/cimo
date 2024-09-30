@@ -67,7 +67,7 @@ export default function Modal({ open, onClose, selectedImage }: ModalProps) {
                   Warning{" "}
                   <Image
                     loader={imageLoader}
-                    src="Awas.gif"
+                    src="awas.gif"
                     alt="warning"
                     width={20}
                     height={20}
@@ -79,7 +79,7 @@ export default function Modal({ open, onClose, selectedImage }: ModalProps) {
                   Depo lagi Depo Lagi{" "}
                   <Image
                     loader={imageLoader}
-                    src="Awas.gif"
+                    src="awas.gif"
                     alt="warning"
                     width={20}
                     height={20}
