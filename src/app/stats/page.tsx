@@ -33,7 +33,7 @@ export default function Stats() {
     switch (index) {
       case 0:
         return (
-          <div className="after-stats cursor-pointer flex flex-col">
+          <div className="after-stats  flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -133,7 +133,7 @@ export default function Stats() {
         );
       case 1:
         return (
-          <div className="after-stats cursor-pointer flex flex-col">
+          <div className="after-stats  flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -231,7 +231,7 @@ export default function Stats() {
         );
       case 2:
         return (
-          <div className="after-stats cursor-pointer flex flex-col">
+          <div className="after-stats  flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -279,7 +279,7 @@ export default function Stats() {
         );
       case 3:
         return (
-          <div className="after-stats cursor-pointer flex flex-col">
+          <div className="after-stats  flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -341,7 +341,7 @@ export default function Stats() {
         );
       case 4:
         return (
-          <div className="after-stats cursor-pointer flex flex-col">
+          <div className="after-stats  flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -450,7 +450,7 @@ export default function Stats() {
               <div className="p-4 space-y-16 justify-center">
                 {/* Biaya Primer */}
                 <div
-                  className="flex flex-row gap-4 p-8"
+                  className="flex cursor-pointer flex-row gap-4 p-8"
                   style={{ backgroundColor: getBgColor(0) }}
                   onClick={() => handleClick(0)}
                 >
@@ -482,7 +482,7 @@ export default function Stats() {
                 </div>
                 {/* Investasi Masa Depan */}
                 <div
-                  className="flex flex-row gap-4 p-8"
+                  className="flex cursor-pointer flex-row gap-4 p-8"
                   style={{ backgroundColor: getBgColor(1) }}
                   onClick={() => handleClick(1)}
                 >
@@ -527,7 +527,7 @@ export default function Stats() {
                 </div>
                 {/* Infaq / Sedekah */}
                 <div
-                  className="flex flex-row gap-4 p-8"
+                  className="flex cursor-pointer flex-row gap-4 p-8"
                   style={{ backgroundColor: getBgColor(2) }}
                   onClick={() => handleClick(2)}
                 >
@@ -558,7 +558,7 @@ export default function Stats() {
                 </div>
                 {/* Pajak */}
                 <div
-                  className="flex flex-row gap-4 p-8"
+                  className="flex cursor-pointer flex-row gap-4 p-8"
                   style={{ backgroundColor: getBgColor(3) }}
                   onClick={() => handleClick(3)}
                 >
@@ -588,7 +588,7 @@ export default function Stats() {
                 </div>
                 {/* Investasi Lain */}
                 <div
-                  className="flex flex-row gap-4 p-8"
+                  className="flex cursor-pointer flex-row gap-4 p-8"
                   style={{ backgroundColor: getBgColor(4) }}
                   onClick={() => handleClick(4)}
                 >
