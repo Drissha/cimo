@@ -64,7 +64,7 @@ export default function Navbar() {
               <div className="absolute top-full mt-2 w-40 bg-[#333333] border-2 border-black shadow-md rounded-md">
                 <ul>
                   <li className="px-4 py-2">
-                    <Link href="/investasi/opportunity">
+                    <Link href="/detail-investasi">
                       <div className="flex flex-row">
                         <span>
                           <Image
@@ -83,7 +83,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li className="px-4 py-2">
-                    <Link href="/investasi/opportunity">
+                    <Link href="/detail-investasi">
                       <div className="flex flex-row">
                         <span>
                           <Image
@@ -102,7 +102,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li className="px-4 py-2">
-                    <Link href="/investasi/opportunity">
+                    <Link href="/detail-investasi">
                       <div className="flex flex-row">
                         <span>
                           <Image

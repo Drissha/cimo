@@ -4,6 +4,7 @@ import { useState } from "react";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
+import "./css/style.css";
 
 interface ImageLoaderProps {
   src: string;
@@ -32,7 +33,7 @@ export default function Stats() {
     switch (index) {
       case 0:
         return (
-          <div className="after-stats flex flex-col">
+          <div className="after-stats cursor-pointer flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -132,7 +133,7 @@ export default function Stats() {
         );
       case 1:
         return (
-          <div className="after-stats flex flex-col">
+          <div className="after-stats cursor-pointer flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -230,7 +231,7 @@ export default function Stats() {
         );
       case 2:
         return (
-          <div className="after-stats flex flex-col">
+          <div className="after-stats cursor-pointer flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -278,7 +279,7 @@ export default function Stats() {
         );
       case 3:
         return (
-          <div className="after-stats flex flex-col">
+          <div className="after-stats cursor-pointer flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -340,7 +341,7 @@ export default function Stats() {
         );
       case 4:
         return (
-          <div className="after-stats flex flex-col">
+          <div className="after-stats cursor-pointer flex flex-col">
             <div className="flex flex-row">
               <span>
                 <Image
@@ -638,9 +639,7 @@ export default function Stats() {
         </section>
       </main>
 
-
       <Footer />
-
     </main>
   );
 }
