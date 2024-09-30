@@ -1,7 +1,6 @@
 "use client";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 interface ImageLoaderProps {
   src: string;
